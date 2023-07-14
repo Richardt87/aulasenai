@@ -1,5 +1,5 @@
 # aulasenai
 
-Aula do dia 22/06
+Richardt berti 
+UC Desenvolvimento de Sistemas
 
-Hoje aprendemos sobre git
