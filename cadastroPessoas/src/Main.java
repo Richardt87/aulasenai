@@ -20,7 +20,8 @@ public class Main {
             System.out.println("2 - Buscar");
             System.out.println("3 - Remover");
             System.out.println("4 - Editar");
-            System.out.println("5 - Sair");
+            System.out.println("5 - Listar");
+            System.out.println("6 - Sair");
             int option = scanner.nextInt();
 
             switch (option){
@@ -43,6 +44,10 @@ public class Main {
                     break;
 
                 case 5 :
+                    listAll();
+                    break;
+
+                case 6 :
                     exit = false;
                     break;
             }
@@ -78,6 +83,19 @@ public class Main {
         studant.name = scanner.nextLine();
         studants.add(studant);
         System.out.println("Obrigado por digitar o nome completo do " + studant.name);
+    }
+
+    private static void listAll(){
+        int countM = 0;
+        int countF = 0;
+        for(int i = 0; i < studants.size(); i++){
+            if (studants.get(i).sexo.equals("Masculino ")){
+                countM++;
+            }else{
+                countF++;
+            }
+        }
+        System.out.println("Masculino: " +  countM + "Feminino: " + countF);
     }
 
     private static Integer findStudant(List<Person> studants, String studantName) {
