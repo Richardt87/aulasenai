@@ -2,6 +2,6 @@ public class Person {
 
     public String name;
 
-    public String sexo;
+    public Sexo sexo;
 
 }

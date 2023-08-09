@@ -1,3 +1,4 @@
+import java.nio.file.FileSystemNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -77,6 +78,7 @@ public class Main {
     }
     private static void addStudant(List<Person> studants){
         Person studant = new Person();
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Digite o nome completo do estudante");
@@ -88,15 +90,24 @@ public class Main {
     private static void listAll(){
         int countM = 0;
         int countF = 0;
-        for(int i = 0; i < studants.size(); i++){
-            if (studants.get(i).sexo.equals("Masculino ")){
-                countM++;
-            }else{
-                countF++;
-            }
+
+        for (Person p : studants){
+            System.out.println(p.name);
         }
-        System.out.println("Masculino: " +  countM + "Feminino: " + countF);
-    }
+        //studants.forEach(p -> {
+         //   System.out.println(p.name);
+       // });
+
+        //for(int i = 0; i < studants.size(); i++){
+        //  if (studants.get(i).sexo.equals("Masculino ")){
+        //    countM++;
+        //}else{
+        //      countF++;
+         //  }
+           }
+        //System.out.println("Masculino: " +  countM + "Feminino: " + countF);
+       //  }
+
 
     private static Integer findStudant(List<Person> studants, String studantName) {
         Integer position = null;
